@@ -16,9 +16,9 @@ import fr.heddib.updater.HeddiBUpdater;
 
 /**
  * FunnyBlocks
- * @version 1.0
+ * @version 1.0.1
  * @author heddib
- *
+ * 
  */
 public class FunnyBlocks extends JavaPlugin {
 	

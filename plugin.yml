@@ -1,7 +1,7 @@
 name: FunnyBlocks
 author: heddib
 main: fr.heddib.funnyblocks.FunnyBlocks
-version: 1.0
+version: 1.0.1
 
 commands:
   funnyblocks:

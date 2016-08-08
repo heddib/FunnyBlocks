@@ -1,5 +1,6 @@
 package fr.heddib.funnyblocks.database;
 
+import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
 
 import fr.heddib.funnyblocks.FunnyBlocks;
@@ -19,13 +20,15 @@ public class ConfigLoader {
 				"\n" +
 				"Par heddib" +
 				"\n" +
-				"auto-updater: Autoriser l'updater à chercher des mises à jour (défaut: true)" + 
+				"Les mises à jour sont obligatoires (pour votre bien). Bon... Vous pouvez les désactiver dans /HeddiBUpdater/HeddiBUpdater.yml (non recommandé)" + 
 				"\n" + 
-				"enable: Autoriser l'utilisation de l'effet"
+				"enable: Autoriser l'utilisation de l'effet (défaut: true)" + 
+				"\n" + 
+				"block: Nom du block (défaut: STAINED_CLAY) Une liste des blocs est disponible ici: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html"
 				);
 		
-		c.addDefault("auto-updater", true);
 		c.addDefault("enable", true);
+		c.addDefault("block", Material.STAINED_CLAY.toString());
 		
 		c.options().copyDefaults(true);
 		FunnyBlocks.getInstance().saveConfig();

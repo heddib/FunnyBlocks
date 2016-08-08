@@ -347,7 +347,7 @@ public class HeddiBUpdater {
 						result = Result.UPDATE_AVAILABLE;
 						if(download) {
 							if(announce) {
-								logger.log(Level.INFO, "[HeddiBUpdater] Downloading a new update : " + updateData[3] + "...");
+								logger.log(Level.INFO, "[HeddiBUpdater] Downloading a new update : " + updateData[2] + "...");
 							}
 							if(download(updateData[0], new File(updateFolder, pluginFile.getName()))) {
 								result = Result.SUCCESS;
@@ -380,6 +380,7 @@ public class HeddiBUpdater {
 			}
 			catch(final Exception ex) {
 				logger.log(Level.SEVERE, "[HeddiBUpdater] Exception '" + ex + "'. Please check your network connection.");
+				ex.printStackTrace();
 				result = Result.ERROR;
 			}
 		}
